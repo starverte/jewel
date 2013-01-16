@@ -1,0 +1,1160 @@
+/*
+Theme Name: Jewel
+Theme URI: http://starverte.com/themes/jewel
+Author: Star Verte LLC
+Author URI: http://starverte.com
+Status: 2/19/2012
+Description: A design originally developed for Earth's Own Jewelry, built on Toolbox 1.3. Toolbox is a semantic, HTML5, canvas for CSS artists and an ultra-minimal set of super-clean templates for your own WordPress theme development.
+Version: 0.1.2
+License: GNU General Public License
+License URI: license.txt
+
+*/
+
+/* =Eric Meyer's CSS Reset
+Source: http://meyerweb.com/eric/tools/css/reset/
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+	text-direction: none;
+}
+
+/* HTML5 display-role reset
+for older browsers
+-------------------------------- */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* =Global
+-------------------------------------------------------------- */
+body {
+	font-family: 'CartoGothicStd', serif;
+}
+h1, h2, h3,
+h4, h5, h6 {
+	color: rgb(65,126,176);
+	font-weight: bolder;
+}
+h1, h2, h3 {
+	clear: both;
+	font: 1.3em 'KaushanScript', sans-serif;
+}
+h1 {
+	font-size: 2em;
+	margin: 0 0 .67em;
+} 
+h2 {
+	font-size: 1.5em;
+	margin: 0 0 .75em;
+}
+h3 {
+	font-size: 1.17em;
+	margin: 0 0 .83em;
+}
+h4 {
+	margin: 0 0 1.12em;
+}
+h5 {
+	font-size: 0.83em;
+	margin: 0 0 1.5em;
+}
+h6 {
+	font-size: 0.75em;
+	margin: 0 0 1.67em;
+}
+a {
+	color: rgb(0,68,124);
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(65,126,176);
+}
+#clear {
+	clear: both;
+}
+#page {
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+}
+#primary {
+	float: left;
+	margin: 0 -240px 0 0;
+	width: 100%;
+}
+#content {
+	margin: 0 230px 1em 0;
+	border: 1px solid rgb(163,175,183);
+	font-size: 0.75em;
+	padding: 0.5em;
+}
+#content:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.home #content {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.nocomments {
+	display: none;
+}
+.blog article {
+	margin: 0.5em 0;
+}
+#main .widget-area {
+	float: right;
+	margin: -24px 0 0;
+	overflow: hidden;
+	width: 220px;
+}
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+#content pre {
+	background: #f3f3f7;
+	border: 1px solid #dedee3;
+	padding: 11px;
+	font-size: 12px;
+	line-height: 1.3em;
+	margin-bottom: 22px;
+	overflow: auto;
+	border-image: initial;
+}
+#content code, pre {
+	font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+	color: #000;
+}
+#content i,
+#content cite,
+#content em,
+#content var,
+#content address,
+#content dfn {
+	font-style: italic;
+}
+#content address {
+	margin: 0.5em 0;
+}
+#content sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+#content sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+#content ul, menu, dir {
+	display: block;
+	line-height: 1.5em;
+	list-style: disc inside;
+	margin: 1em 0 1em 1.5em;
+}
+#content ul li ul {
+	list-style: circle inside;
+	margin: 0 0 0 3em;
+}
+#content ul li ul li ul {
+	list-style: square inside;
+	margin: 0 0 0 3em;
+}
+#content ol {
+	display: block;
+	line-height: 1.5em;
+	list-style: upper-roman inside;
+	margin: 1em 0 1em 1.5em;
+}
+#content ol li ol {
+	list-style: decimal inside;
+	margin: 0 0 0 3em;
+}
+#content ol li ol li ol {
+	list-style: lower-alpha inside;
+	margin: 0 0 0 3em;
+}
+#content dl {
+	display: block;
+	margin: 0.5em 0;
+}
+#content dt {
+	display: block;
+	font-weight: bold;
+}
+#content dd {
+	display: block;
+	margin: 1em 2em;
+}
+#content big {
+	font-size: larger;
+}
+#content kbd, tt {
+	font-family: monospace;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Tables */
+tbody {
+	display: block;
+	border: 1px solid rgb(163,175,183);
+	margin-bottom: 1.5em;
+}
+tr {
+	border-bottom: 1px solid rgb(163,175,183);
+}
+tr:last-child {
+	border-bottom: 0;
+}
+th {
+	background: #f2faff;
+}
+th, td {
+	border-right: 1px solid rgb(163,175,183);
+	padding: 0 1em;
+	text-align: center;
+}
+td.label {
+	padding: 0 0.25em 0 1em;
+	text-align: right;
+}
+th:last-child,
+td:last-child {
+	border-right: 0;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#logo {
+	float: left;
+	height: 100px;
+	padding: 0.5em;
+	width: auto;
+}
+#site-title {
+	display: none;
+	font-size: 2em;
+	font-weight: bold;
+	margin: .67em 0;
+}
+#site-description {
+	display: none;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 1em;
+}
+#version {
+	float: right;
+	padding: 0.5em;
+	font-size: 12px;
+	text-align: right;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	border: 1px solid rgb(163,175,183);
+	display: block;
+	float: left;
+	margin: 0 auto 1em;
+	width: 100%;
+	height: 1.5em;
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	color: rgb(65,126,176);
+	display: block;
+	font-size: 0.625em;
+	line-height: 2em;
+	padding: 0.3em 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#access ul ul {
+	background: #fff;
+	display: none;
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: 0;
+	z-index: 99999;
+	border: 1px solid rgb(163,175,183);
+}
+#access ul ul ul {
+	left: 100%;
+	top: -1px;
+}
+#access ul ul a {
+
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	color: rgb(150,184,214);
+}
+#access ul ul a:hover {
+
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+.sticky {
+}
+.entry-meta {
+	color: #a0a0a0;
+	clear: both;
+	display: block;
+	font-size: 0.8em;
+}
+.entry-meta a {
+	color: #555;
+}
+.entry-meta a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+.entry-header .entry-meta {
+	position: relative;
+	top: -0.75em;
+}
+.entry-title {
+	border-bottom: 2px solid rgb(65,126,176);
+	padding-bottom: 0.125em;
+	margin: 0 0 0.5em;
+	color: rgb(65,126,176);
+	font-size: 3em;
+}
+.entry-content {
+	clear: left;
+}
+.single-author .entry-meta .byline {
+	display: none;
+}
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	font-size: 1em;
+	border: 1px solid #417EB0;
+	background: #D9ECFF;
+	color: #417EB0;
+	padding: 4px 6px 3px;
+	margin: 0 0 0.5em;
+}
+#content nav .nav-previous:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	font-size: 1em;
+	border: 1px solid #417EB0;
+	background: #D9ECFF;
+	color: #417EB0;
+	padding: 4px 6px 3px;
+	margin: 0 0 0.5em;
+	position: relative;
+	right: 6px;
+}
+#content nav .nav-next:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+#content #nav-above {
+	display: none;
+}
+#content p {
+	margin-bottom: 0.5em;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: none;
+}
+#nav-below {
+	display: block;
+	margin: 1em 0 0;
+}
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link,
+.post .edit-link {
+	clear: none;
+	display: block;
+	float: left;
+	left: 688px;
+	position: relative;
+	top: -72px;
+}
+.blog .edit-link {
+	top: -52px;
+}
+.blog .format-aside .edit-link {
+	top: -8px;
+	left: 668px;
+}
+.page .edit-link a,
+.post .edit-link a {
+	color: #000;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	height: 2.2em;
+	border: 1px solid rgb(163,175,183);
+	background: #ededed;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+
+.page .edit-link a:hover,
+.post .edit-link a:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+.more-link,
+.wpus-cart-button-form .submit {
+	float: right;
+	font-size: 1em;
+	border: 1px solid rgb(65,126,176);
+	background: #d9ecff;
+	color: rgb(65,126,176);
+	padding: 4px 6px 3px;
+}
+.more-link:hover,
+.wpus-cart-button-form .submit:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside {
+	border: 1px solid rgb(65,126,176);
+	padding: 0.5em;
+	background: #f2faff;
+	margin: 0.5em;
+}
+#content .format-aside p {
+	margin-bottom: 0;
+}
+.format-aside .entry-title,
+.format-aside .entry-meta {
+	display: none;
+}
+.single .format-aside .entry-title,
+.single .format-aside .entry-meta {
+	display: block;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin: 0 0 0.5em;
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-left: 0;
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+	margin-right: 0;
+}
+img.aligncenter {
+	margin: 0.5em auto;
+}
+.wp-caption {
+	border: 1px solid rgb(65,126,176);
+	padding: 0.125em;
+	background: #f2faff;
+	text-align: center;
+	margin: 0 0 0.5em;
+}
+.wp-caption.alignleft {
+	margin-left: 0;
+	margin-right: 1em;
+}
+.wp-caption.alignright {
+	margin-left: 1em;
+	margin-right: 0;
+}
+.wp-caption.aligncenter {
+	margin: 0.5em auto;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+.gallery img {
+	border: 1px solid rgb(65,126,176)!important;
+}
+.gallery-caption {
+	margin: 0 auto!important;
+	border: 1px solid rgb(65,126,176);
+	padding: 0.25em;
+	background: #f2faff;
+	width: 144px;
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+#branding #searchform {
+	position: relative;
+	float: right;
+	top: -75px;
+	text-align: left;
+	right: -2px;
+}
+#branding #searchform label {
+	display: none;
+}
+#branding #searchform input#s {
+	-moz-transition: width 2s; /* Firefox */
+	-webkit-transition: width 2s ease; /* Chrome and Safari */
+	-o-transition: width 2s; /* Opera */
+	padding-left: 5px;
+	width: 7.8em;
+	text-align: left;
+	margin: 0;
+}
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	background: #fcfcfc;
+	padding-left: 5px;
+	width: 72%;
+	text-align: left;
+}
+#branding #searchsubmit {
+	display: none;
+}
+#searchsubmit {
+	height: 2.05em;
+	border: 1px solid rgb(163,175,183);
+	background: #ededed;
+}
+#searchsubmit:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 75px;
+}
+#branding #searchform input#s:hover,
+#branding #searchform input#s:focus {
+	background: #fff;
+	color: rgb(65,126,176);	
+	width: 220px;
+}
+#searchform input#s:hover,
+#searchform input#s:focus {
+	background: #fff;
+	color: rgb(65,126,176);	
+}
+input#s {
+	border: 1px solid rgb(163,175,183);
+	font-size: 0.625em;
+	line-height: 2em;
+	margin: 0;
+	padding-left: 4px;
+}
+textarea {
+	width: 80%;
+}
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#comments-title {
+	display: none;
+}
+article.comment {
+	border: 1px solid rgb(65,126,176);
+	padding: 0.25em;
+	display: block;
+	margin: 0.5em 0;
+}
+.avatar {
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+/* .avatar {
+	float: right;
+	margin: 0 0 0 0.5em;
+} */
+.odd article.comment {
+	background: rgb(186,216,235);
+}
+#comments {
+	font: 0.75em Arial, Helvetica, sans-serif;
+}
+#comments ol {
+	line-height: 1em;
+	list-style: none;
+	margin: 0;
+}
+#respond {
+	border: 1px solid rgb(65,126,176);
+	padding: 0.5em;
+	background: #f2faff;
+}
+#respond #reply-title {
+	border-bottom: 2px solid rgb(65,126,176);
+	padding-bottom: 0.125em;
+	margin-bottom: 0.5em;
+	color: rgb(65,126,176);
+	font-size: 1.5em;
+}
+#respond input[type=text] {
+	display: block;
+	width: 60%;
+}
+#respond textarea {
+	display: block;
+	margin: 0 0 1em;
+	width: 80%;
+	max-width: 99%;
+}
+#respond .form-allowed-tags {
+	display: none;
+}
+#respond .form-allowed-tags code {
+	display: block;
+}
+#respond #submit {
+	height: 2.2em;
+	border: 1px solid rgb(65,126,176);
+	background: #d9ecff;
+	color: rgb(65,126,176);
+}
+#respond #submit:hover {
+	background: #fff;
+	color: rgb(65,126,176);
+}
+#respond #cancel-comment-reply-link {
+	font-size: 0.6em;
+	float: right;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+	border: 1px solid rgb(163,175,183);
+	font-size: 0.75em;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}
+.widget h1,
+.widget h2,
+.widget h3,
+.widget h4,
+.widget h5,
+.widget h6 {
+	font-family: 'CartoGothicStd', serif;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+.widget_search {
+	border: none;
+	padding: 0;
+}
+.widget-title {
+	border-bottom: 2px solid rgb(65,126,176);
+	padding-bottom: 0.125em;
+	margin: 0 0 0.5em;
+	color: rgb(65,126,176);
+	font-variant: small-caps;
+	font-size: 1.2em;
+}
+.rss-date {
+float: right;
+font-weight: 100;
+font-size: 0.8em;
+padding: 0.25em 0 0;
+}
+.rssSummary {
+margin: 0.75em 0 1em;
+clear: right;
+}
+ 
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	border: 1px solid rgb(163,175,183);
+	color: rgb(65,126,176);
+	font-size: 0.75em;
+	line-height: 2em; 
+	width: 960px;
+}
+
+#site-generator {
+	text-align: center;
+}
+
+/* =Nivo Slider
+-------------------------------------------------------------- */
+
+.theme-default .nivoSlider {
+	border: 1px solid rgb(163,175,183);
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	box-shadow: none!important;
+	margin-bottom: 1em!important;
+}
+
+/* =Stone Type Archive Page
+-------------------------------------------------------------- */
+
+.post-type-archive-jewelry #content,
+.tax-stone #content {
+	border: 0;
+	padding: 0;
+	margin-top: -8px;
+	margin-bottom: 0.5em;
+}
+.post-type-archive-jewelry .page-title,
+.tax-stone .page-title {
+	font-size: 1.5em;
+	margin: 0 0 0.25em;
+}
+.post-type-archive-jewelry .category-archive-meta,
+.tax-stone .category-archive-meta {
+	margin-bottom: 0.25em;
+	font-weight: 100;
+	font-size: 0.8em;
+}
+.post-type-archive-jewelry .page-header,
+.tax-stone .page-header {
+	border: 1px solid rgb(163,175,183);
+	padding: 0.5em;
+	width: 710px;
+	position: relative;
+	margin-top: -15px;
+}
+.post-type-archive-jewelry article img,
+.tax-stone article img {
+	border: 1px solid rgb(163,175,183);
+	float: left;
+	margin: 9px 5px 0 0;
+}
+.post-type-archive-jewelry article.third img,
+.tax-stone article.third img {
+	margin: 9px 0 0 0;
+}
+.post-type-archive-jewelry article .thumb-price,
+.tax-stone article .thumb-price {
+	float: right;
+	top: -125px;
+	position: absolute;
+	right: 5px;
+	padding: 0.5em;
+	background: rgb(65,126,176);
+	color: #fff;
+	border: 1px solid rgb(163,175,183);
+	font-size: 1.1em;
+	background: rgba(65,126,176,0.75);
+}
+.post-type-archive-jewelry article.third .thumb-price,
+.tax-stone article.third .thumb-price {
+	right: 0;
+}
+
+/* =Hovercard
+-------------------------------------------------------------- */
+
+.hc-preview {
+	position: relative;
+	display: inline;
+}  
+.hc-name {
+	display: inline-block;
+}  
+.hc-details {
+	margin-right: 80px;
+	text-align: left;
+	border: 1px solid rgb(163,175,183);
+	position: absolute;
+	top: -168px;
+	padding: 0.5em;
+	display: none;
+	height: 164px;
+}  
+.hc-pic {
+	width: 70px;
+	margin-top: -1em;
+	float: right;
+}  
+.hc-details-open-left {
+	left:  auto;
+	right: -10px;
+	text-align: right;
+	margin-left: 80px;
+	margin-right: 0;
+}   
+.hc-details-open-left > .hc-pic {
+	float: left;
+}    
+.hc-details-open-top > .hc-pic {
+	margin-top: 10px;
+	float: right;
+}  
+.hc-details .s-action{
+	position:  absolute;
+	top: 8px;
+	right: 5px;
+}   
+.hc-details .s-card-pad{
+	border-top:  1px solid rgb(163,175,183);
+	margin-top: 10px;
+	padding-top: 10px;
+	overflow: hidden;
+}   
+.hc-details-open-top .s-card-pad {
+	border: none;
+	border-bottom:  1px solid rgb(163,175,183);
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}  
+/* .hc-details .s-card .s-strong{
+	font-weight: bold;
+	color:  #555;
+} */  
+.hc-details .s-img{
+	float:  left;
+	margin-right:  10px;
+	max-width:  70px;
+}   
+/* .hc-details .s-name{
+	color: #222;
+	font-weight: bold;
+} */
+.hc-details .s-loc{
+	float: left;
+}  
+.hc-details-open-left .s-loc{
+	float: right;
+}   
+.hc-details .s-href{
+	clear: both;
+	float: left;
+}   
+.hc-details .s-desc{
+	float: left;
+	margin-top: 5px;
+	width: 100%;
+}   
+.hc-details .s-username{
+	text-decoration: none;
+}   
+.hc-details .s-stats {
+	display: block;
+	float: left;
+	margin-top: 5px;
+	clear: both;
+	padding: 0px;
+}  
+.hc-details ul.s-stats li{
+	list-style: none;
+	float: left;
+	display: block;
+	padding: 0px 10px !important;
+	border-left: 1px solid rgb(163,175,183);
+}   
+.hc-details ul.s-stats li: first-child{
+	border: none;
+	padding-left: 0 !important;
+}   
+/* .hc-details .s-count {
+	font-weight:  bold;
+} */
+.jtitle {
+	max-height: 1.2em;
+	overflow: hidden;
+}
+.jcontent img {
+	position: relative;
+	top: -0.7em;
+	left: -0.45em;
+	float: left;
+}
+.jcontent .desc-price {
+	text-align: left;
+	margin: 0.5em 0;
+	font-size: 1.1em;
+	color: rgb(65,126,176);
+}
+.jcontent .desc-ship {
+	text-align: left;
+	margin: 0.5em 0;
+	font-size: 1.1em;
+	color: rgb(65,126,176);
+}
+.shopping_cart th,
+.shopping_cart td {
+	border: none;
+	padding: 0.25em 0.25em;
+	text-align: center;
+}
+.widget_wp_paypal_shopping_cart {
+	border: none;
+}
+
+/* =Generated by Font Squirrel (http://www.fontsquirrel.com)
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'KaushanScript';
+    src: url('fonts/kaushanscript-webfont.eot');
+    src: url('fonts/kaushanscript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kaushanscript-webfont.woff') format('woff'),
+         url('fonts/kaushanscript-webfont.ttf') format('truetype'),
+         url('fonts/kaushanscript-webfont.svg#KaushanScriptRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CartoGothicStd';
+    src: url('fonts/cartogothicstd.eot');
+    src: url('fonts/cartogothicstd.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cartogothicstd.woff') format('woff'),
+         url('fonts/cartogothicstd.ttf') format('truetype'),
+         url('fonts/cartogothicstd.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CartoGothicStd-Italic';
+    src: url('fonts/cartogothicstd-italic.eot');
+    src: url('fonts/cartogothicstd-italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cartogothicstd-italic.woff') format('woff'),
+         url('fonts/cartogothicstd-italic.ttf') format('truetype'),
+         url('fonts/cartogothicstd-italic.svg#CartoGothicStdItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CartoGothicStd-Bold';
+    src: url('fonts/cartogothicstd-bold.eot');
+    src: url('fonts/cartogothicstd-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cartogothicstd-bold.woff') format('woff'),
+         url('fonts/cartogothicstd-bold.ttf') format('truetype'),
+         url('fonts/cartogothicstd-bold.svg#CartoGothicStdBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CartoGothicStd-BoldItalic';
+    src: url('fonts/cartogothicstd-bolditalic.eot');
+    src: url('fonts/cartogothicstd-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cartogothicstd-bolditalic.woff') format('woff'),
+         url('fonts/cartogothicstd-bolditalic.ttf') format('truetype'),
+         url('fonts/cartogothicstd-bolditalic.svg#CartoGothicStdBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
