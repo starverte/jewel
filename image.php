@@ -2,8 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 

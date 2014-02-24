@@ -4,8 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 1.2
  */
 ?>

@@ -7,8 +7,7 @@
  * handled by a callback to jewel_comment() which is
  * located in the functions.php file.
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 ?>
