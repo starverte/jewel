@@ -2,8 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 

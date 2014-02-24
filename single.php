@@ -2,8 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 

@@ -2,8 +2,7 @@
 /**
  * The template for displaying Author Archive pages.
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 

@@ -2,8 +2,7 @@
 /**
  * The template used to display Tag Archive pages
  *
- * @package WordPress
- * @subpackage Jewel
+ * @package Jewel
  * @since Jewel 0.1
  */
 
